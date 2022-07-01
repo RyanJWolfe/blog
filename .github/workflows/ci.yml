@@ -43,7 +43,7 @@ jobs:
         run: bin/rails db:prepare
 
       - name: Run tests
-        run: bin/rails test:all
+        run: bin/rails test
 
       - name: Run brakeman
         run: bundle exec brakeman
