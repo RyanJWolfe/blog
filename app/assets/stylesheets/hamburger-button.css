@@ -14,7 +14,7 @@
 .menu-btn__burger {
     width: 28px;
     height: 3px;
-    background: rgb(var(--color-primary));
+    background: rgb(var(--color-text-based));
     border-radius: 1px;
     transition: all .5s ease-in-out;
 }
@@ -24,7 +24,7 @@
     position: absolute;
     width: 28px;
     height: 3px;
-    background: rgb(var(--color-primary));
+    background: rgb(var(--color-text-based));
     border-radius: 1px;
     transition: transform .5s ease-in-out;
 }

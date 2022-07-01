@@ -50,41 +50,38 @@
 
     .theme-dark {
         --color-text-based: 255, 255, 255; /* white */
-        --color-text-primary: 52, 211, 153; /* green-300 */
-        --color-text-muted: 170, 180, 170;
+        --color-text-primary: 56, 189, 248; /* sky-400 */
+        --color-text-muted: 179, 179, 179;
         --color-text-based-hover: 255, 255, 255;
         --color-text-inverted: 18, 18, 18;
-        --color-bg: 0, 0, 0; /* black */
-        --color-primary: 52, 211, 153; /* green-400 */
-        --color-primary-hover: 134, 239, 172; /* green-300 */
-        --color-primary-press: 34, 197, 94; /* green-500 */
-        --color-secondary: 21, 21, 21;
-        --color-secondary-hover: 33, 33, 33;
-        --color-secondary-press: 10, 10, 10;
-        --color-bg-surface: 31, 41, 55;
-        --color-bg-surface-accent: 55, 65, 81;
-        --color-page-transition: 31, 41, 55;
+        --color-bg: 18, 18, 18;
+        --color-primary: 14, 165, 233; /* sky-500 */
+        --color-primary-hover: 56, 189, 248; /* sky-400 */
+        --color-primary-press: 2, 132, 199; /* sky-600 */
+        --color-secondary: 36, 37, 38;
+        --color-secondary-hover: 58, 59, 60;
+        --color-secondary-press: 24, 24, 24;
+        --color-bg-surface: 36, 37, 38;
+        --color-bg-surface-accent: 58, 59, 60;
+        --color-nav: 24, 24, 24;
     }
 }
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based font-mono
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
     }
     .btn:focus {
-        @apply outline-none ring ring-offset-2
+        @apply outline-none
     }
     .btn-primary {
-        @apply bg-base text-primary hover:bg-primary/25 hover:text-based active:bg-primary-press/25 border border-primary shadow shadow-primary
-    }
-    .btn-primary:focus {
-        @apply outline-none ring-primary;
+        @apply bg-primary text-white hover:bg-primary-hover hover:text-based active:bg-primary-press border border-primary shadow shadow-primary
     }
     .btn-secondary {
-        @apply bg-secondary text-white hover:bg-gray-700 focus:ring-secondary focus:ring-opacity-50 active:bg-secondary-press border border-secondary
+        @apply bg-secondary text-based hover:bg-secondary-hover active:bg-secondary-press border border-secondary-hover shadow shadow-secondary
     }
     .btn-tertiary {
-        @apply bg-none border border-primary hover:bg-gray-400 hover:dark:bg-gray-800 dark:hover:text-based  hover:bg-opacity-25 text-primary dark:text-primary-hover focus:ring-primary focus:ring-opacity-50
+        @apply bg-base text-primary hover:bg-primary/25 hover:text-based active:bg-primary-press/25 border border-primary shadow shadow-primary
     }
 }
 
