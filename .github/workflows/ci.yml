@@ -31,11 +31,11 @@ jobs:
           ruby-version: 3.1.2
           bundler-cache: true
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "lts/*"
-          cache: "yarn"
+#      - name: Setup Node
+#        uses: actions/setup-node@v3
+#        with:
+#          node-version: "lts/*"
+#          cache: "yarn"
 
       - name: Preparing database
         run: bin/rails db:prepare
