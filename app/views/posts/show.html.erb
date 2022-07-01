@@ -5,6 +5,7 @@
     <% end %>
 
     <%= render @post %>
+    <%= render 'posts/comments', post: @post %>
 
     <%= link_to 'Edit this post', edit_post_path(@post), class: "btn btn-secondary" %>
     <div class="inline-block ml-2">
