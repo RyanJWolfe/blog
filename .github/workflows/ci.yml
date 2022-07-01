@@ -11,7 +11,8 @@ jobs:
         image: postgres:14.1
         ports: ["5432:5432"]
         env:
-          POSTGRES_USER: runner
+          POSTGRES_DB: rails_test
+          POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
         options: >-
           --health-cmd pg_isready
@@ -20,6 +21,7 @@ jobs:
           --health-retries 5
     env:
       RAILS_ENV: test
+      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
 
     steps:
       - name: Checkout
