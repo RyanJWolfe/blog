@@ -2,5 +2,21 @@
   <div class="font-playfair tracking-wider text-3xl font-bold">
     Blog
   </div>
-  <%= render 'layouts/nav/mobile_menu_btn' %>
+  <div class="flex -mr-2.5">
+    <button title="Toggle color scheme"
+            data-controller="theme"
+            data-action="click->theme#toggleTheme"
+            type=button
+            class="p-2">
+      <div class="hidden dark:block">
+        <%= render 'shared/svgs/sun', size: 30 %>
+      </div>
+      <div class="dark:hidden block">
+        <%= render 'shared/svgs/moon', size: 30 %>
+      </div>
+    </button>
+
+
+    <%= render 'layouts/nav/mobile_menu_btn' %>
+  </div>
 </nav>
