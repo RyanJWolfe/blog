@@ -9,9 +9,9 @@
                 style: "transition-delay: 100ms;" do %>
       <span class="inline-block w-full">Home</span>
     <% end %>
-    <%= link_to root_path,
+    <%= link_to about_path,
                 class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent
-                #{'border-r-4 border-primary text-primary font-bold' if current_page? root_path}",
+                #{'border-r-4 border-primary text-primary font-bold' if current_page? about_path}",
                 style: "transition-delay: 200ms;" do %>
       <span class="inline-block w-full">About</span>
     <% end %>
