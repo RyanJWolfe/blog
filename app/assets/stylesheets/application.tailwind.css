@@ -62,8 +62,8 @@
         --color-secondary: 36, 37, 38;
         --color-secondary-hover: 58, 59, 60;
         --color-secondary-press: 24, 24, 24;
-        --color-bg-surface: 235, 235, 235;
-        --color-bg-surface-accent: 200, 200, 200;
+        --color-bg-surface: 200, 200, 200;
+        --color-bg-surface-accent: 175, 175, 175;
         --color-nav: 224, 224, 224;
         /* End theme vars */
     }

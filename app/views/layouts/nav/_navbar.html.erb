@@ -1,24 +1,25 @@
-<nav class="fixed bg-nav top-0 w-full z-20 h-16 sm:h-20 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24 bg-base flex items-center justify-between">
-  <%= link_to root_path do %>
+<nav class="fixed bg-nav top-0 w-full z-20 h-16 sm:h-20 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24
+            flex items-center justify-between">
+  <%= link_to root_path, class: "hover-underline p-2 -ml-2" do %>
     <div class="font-display text-3xl font-semibold">
       Blog
     </div>
   <% end %>
-  <div class="flex -mr-2.5 lg:space-x-8 items-center">
-    <div class="hidden lg:flex lg:space-x-8 font-display">
+  <div class="flex -mr-2.5 lg:space-x-2 items-center">
+    <div class="hidden lg:flex font-display">
       <%= render 'layouts/nav/navbar_link', route: root_path, content: 'Home', condition: current_page?(root_path) %>
       <%= render 'layouts/nav/navbar_link', route: posts_path, content: 'Posts', condition: inside_posts %>
       <%= render 'layouts/nav/navbar_link', route: about_path, content: 'About', condition: inside_about %>
       <%= render 'layouts/nav/navbar_link', route: contact_path, content: 'Contact', condition: inside_contact %>
       <% if admin_signed_in? %>
-        <%= button_to 'Sign out', destroy_admin_session_path, method: :delete %>
+        <%= button_to 'Sign out', destroy_admin_session_path, method: :delete, class: "text-lg hover:bg-surface hover-underline p-4" %>
       <% end %>
     </div>
     <button title="Toggle color scheme"
             data-controller="theme"
             data-action="click->theme#toggleTheme"
             type=button
-            class="p-2">
+            class="p-2 hover:bg-surface hover-underline text-based hover:text-yellow-500 dark:hover:text-yellow-400">
       <div class="hidden dark:block">
         <%= render 'shared/svgs/sun', size: 30 %>
       </div>
