@@ -1,7 +1,9 @@
 <nav class="fixed bg-nav top-0 w-full z-20 h-16 sm:h-20 lg:h-24 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24 bg-base flex items-center justify-between">
-  <div class="font-playfair tracking-wider text-3xl font-bold">
-    Blog
-  </div>
+  <%= link_to root_path do %>
+    <div class="font-playfair tracking-wider text-3xl font-bold">
+      Blog
+    </div>
+  <% end %>
   <div class="flex -mr-2.5">
     <button title="Toggle color scheme"
             data-controller="theme"
