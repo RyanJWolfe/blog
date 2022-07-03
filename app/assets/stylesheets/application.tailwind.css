@@ -86,8 +86,27 @@
     .btn-group {
         @apply flex flex-wrap justify-center
     }
+    .is-invalid {
+        @apply border-red-500
+    }
+    .invalid-feedback {
+        @apply text-red-500 text-sm
+    }
+    .contact-form-text-area {
+        @apply px-1 py-2 bg-base w-full border-b-2 border-based focus:outline-none focus:border-primary text-area-transition
+    }
 }
 
 @layer utilities {
+    .text-area-transition {
+        transition: border-bottom 500ms ease-in-out, padding 500ms ease-out;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: all 10000s ease-in-out 0s;
+    }
 }
 @import 'actiontext.css';

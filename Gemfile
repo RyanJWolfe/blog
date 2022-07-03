@@ -84,3 +84,4 @@ group :test do
 end
 
 gem 'devise'
+gem 'mail_form'
