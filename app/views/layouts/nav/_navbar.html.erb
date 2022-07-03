@@ -4,7 +4,11 @@
       Blog
     </div>
   <% end %>
-  <div class="flex -mr-2.5">
+  <div class="flex -mr-2.5 lg:mr-0 lg:space-x-4 items-center">
+    <div class="hidden lg:flex lg:space-x-2">
+      <%= link_to 'About', root_path %>
+      <%= link_to 'Contact', root_path %>
+    </div>
     <button title="Toggle color scheme"
             data-controller="theme"
             data-action="click->theme#toggleTheme"
@@ -18,7 +22,8 @@
       </div>
     </button>
 
-
-    <%= render 'layouts/nav/mobile_menu_btn' %>
+    <div class="lg:hidden">
+      <%= render 'layouts/nav/mobile_menu_btn' %>
+    </div>
   </div>
 </nav>
