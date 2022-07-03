@@ -7,7 +7,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Admin.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
 10.times do
   Post.create!(title: Faker::Lorem.sentence)
