@@ -39,9 +39,9 @@
         --color-primary: 14, 165, 233; /* sky-500 */
         --color-primary-hover: 56, 189, 248; /* sky-400 */
         --color-primary-press: 2, 132, 199; /* sky-600 */
-        --color-secondary: 21, 21, 21;
-        --color-secondary-hover: 33, 33, 33;
-        --color-secondary-press: 10, 10, 10;
+        --color-secondary: 36, 37, 38;
+        --color-secondary-hover: 58, 59, 60;
+        --color-secondary-press: 24, 24, 24;
         --color-bg-surface: 235, 235, 235;
         --color-bg-surface-accent: 200, 200, 200;
         --color-nav: 224, 224, 224;
@@ -69,19 +69,22 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based cursor-pointer
     }
     .btn:focus {
         @apply outline-none
     }
     .btn-primary {
-        @apply bg-primary text-white hover:bg-primary-hover hover:text-based active:bg-primary-press border border-primary shadow shadow-primary
+        @apply bg-primary text-white hover:bg-primary-hover active:bg-primary-press border border-primary shadow shadow-primary
     }
     .btn-secondary {
-        @apply bg-secondary text-based hover:bg-secondary-hover active:bg-secondary-press border border-secondary-hover shadow shadow-secondary
+        @apply bg-secondary text-white hover:bg-secondary-hover active:bg-secondary-press border border-secondary-hover shadow shadow-secondary
     }
     .btn-tertiary {
         @apply bg-base text-primary hover:bg-primary/25 hover:text-based active:bg-primary-press/25 border border-primary shadow shadow-primary
+    }
+    .btn-group {
+        @apply flex flex-wrap justify-center
     }
 }
 
