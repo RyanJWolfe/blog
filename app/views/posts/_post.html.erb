@@ -19,7 +19,9 @@
 
   <% if action_name != "show" %>
     <%= link_to "Show this post", post, class: "btn btn-primary" %>
+    <% if admin_signed_in? %>
     <%= link_to 'Edit this post', edit_post_path(post), class: "btn btn-tertiary" %>
+    <% end %>
     <hr class="mt-6">
   <% end %>
 </div>
