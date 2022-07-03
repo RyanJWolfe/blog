@@ -9,11 +9,14 @@
 
 Admin.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
-post1 = Post.create!(title: 'First Post', content: '<p>This is the first post</p>')
-post2 = Post.create!(title: 'Second Post', content: '<p>This is the second post</p>')
-Post.create!(title: 'Third Post', content: '<p>This is the third post</p>')
+10.times do
+  Post.create!(title: Faker::Lorem.sentence)
+end
 
-post1.comments.create!(content: 'This is the first comment')
-post1.comments.create!(content: 'This is the second comment')
+Post.all.each do |post|
+  rand(0..5).times do
+    post.comments.create!(content: Faker::Lorem.sentence)
+  end
 
-post2.comments.create!(content: 'This is the first comment')
+  ActionText::RichText.create!(record_type: 'Post', record_id: post.id, name: 'content', body: Faker::Lorem.paragraph)
+end
