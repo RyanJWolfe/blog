@@ -2,7 +2,7 @@
      id="mobile-menu"
      class="-right-full w-7/12 h-screen absolute top-0 text-based bg-gradient-to-br from-surface to-base-hue
      shadow-xl dark:shadow-neutral-900 space-y-8 z-10 transition-[right] ease-in-out duration-500 px-6 sm:px-8 md:px-16">
-  <div class="flex flex-col space-y-2 w-full tracking-wider text-right text-lg md:text-xl pt-20 sm:pt-32 pb-10 font-poppins font-medium">
+  <div class="flex flex-col space-y-2 w-full tracking-wider text-right text-lg md:text-xl pt-20 sm:pt-32 pb-10">
     <%= render 'layouts/nav/side_menu_link',
                route: root_path,
                content: 'Home',
@@ -28,7 +28,7 @@
                     method: :delete,
                     class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent",
                     style: "transition-delay: 500ms;" do %>
-        <span class="text-right inline-block w-full">Sign out</span>
+        <span class="text-right inline-block w-full font-display">Sign out</span>
       <% end %>
     <% end %>
   </div>

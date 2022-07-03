@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Lora', ...defaultTheme.fontFamily.sans],
-        'playfair': ['Playfair Display'],
+        'display': ['Poppins'],
       },
       colors: {
         based: withOpacity('--color-text-based'),
