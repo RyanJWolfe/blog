@@ -20,7 +20,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Chivo', ...defaultTheme.fontFamily.sans],
+        sans: ['Lora', ...defaultTheme.fontFamily.sans],
         'playfair': ['Playfair Display'],
       },
       colors: {

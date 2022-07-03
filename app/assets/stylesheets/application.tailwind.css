@@ -4,21 +4,6 @@
 
 @layer base {
     @font-face {
-        font-family: 'Chivo';
-        font-weight: 700;
-        src: url('Chivo-Bold.ttf')
-    }
-    @font-face {
-        font-family: 'Chivo';
-        font-weight: 400;
-        src: url('Chivo-Regular.ttf')
-    }
-    @font-face {
-        font-family: 'Chivo';
-        font-weight: 300;
-        src: url('Chivo-Light.ttf')
-    }
-    @font-face {
         font-family: 'Playfair Display';
         font-style: normal;
         src: url('PlayfairDisplay-VariableFont_wght.ttf')
@@ -27,6 +12,16 @@
         font-family: 'Playfair Display';
         font-style: italic;
         src: url('PlayfairDisplay-Italic-VariableFont_wght.ttf')
+    }
+    @font-face {
+        font-family: 'Lora';
+        font-style: normal;
+        src: url('Lora-VariableFont_wght.ttf')
+    }
+    @font-face {
+        font-family: 'Lora';
+        font-style: italic;
+        src: url('Lora-Italic-VariableFont_wght.ttf')
     }
 
     :root {
