@@ -1,0 +1,6 @@
+<%= link_to route,
+            class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent
+                #{'border-r-4 border-primary text-primary font-bold' if condition}",
+            style: "transition-delay: #{delay};" do %>
+  <span class="inline-block w-full"><%= content %></span>
+<% end %>

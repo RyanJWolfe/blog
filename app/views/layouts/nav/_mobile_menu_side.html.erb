@@ -3,22 +3,25 @@
      class="-right-full w-7/12 h-screen absolute top-0 text-based bg-gradient-to-br from-surface to-base-hue
      shadow-xl dark:shadow-neutral-900 space-y-8 z-10 transition-[right] ease-in-out duration-500 px-6 sm:px-8 md:px-16">
   <div class="flex flex-col space-y-2 w-full tracking-wider text-right text-lg md:text-xl pt-20 sm:pt-32 pb-10 font-poppins font-medium">
-    <%= link_to root_path,
-                class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent
-                #{'border-r-4 border-primary text-primary font-bold' if current_page? root_path}",
-                style: "transition-delay: 100ms;" do %>
-      <span class="inline-block w-full">Home</span>
-    <% end %>
-    <%= link_to about_path,
-                class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent
-                #{'border-r-4 border-primary text-primary font-bold' if current_page? about_path}",
-                style: "transition-delay: 200ms;" do %>
-      <span class="inline-block w-full">About</span>
-    <% end %>
-    <%= link_to contact_path, class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface-accent
-                              #{'border-r-4 border-primary text-primary font-bold' if current_page? contact_path}",
-                              style: "transition-delay: 300ms;" do %>
-      <span class="inline-block w-full">Contact</span>
-    <% end %>
+    <%= render 'layouts/nav/side_menu_link',
+               route: root_path,
+               content: 'Home',
+               condition: current_page?(root_path),
+               delay: '100ms' %>
+    <%= render 'layouts/nav/side_menu_link',
+               route: posts_path,
+               content: 'Posts',
+               condition: inside_posts,
+               delay: '200ms' %>
+    <%= render 'layouts/nav/side_menu_link',
+               route: about_path,
+               content: 'About',
+               condition: inside_about,
+               delay: '300ms' %>
+    <%= render 'layouts/nav/side_menu_link',
+               route: contact_path,
+               content: 'Contact',
+               condition: inside_contact,
+               delay: '400ms' %>
   </div>
 </div>
