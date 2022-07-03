@@ -9,9 +9,9 @@
 
 Admin.create(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
-post1 = Post.create!(title: 'First Post', content: 'This is the first post')
-post2 = Post.create!(title: 'Second Post', content: 'This is the second post')
-Post.create!(title: 'Third Post', content: 'This is the third post')
+post1 = Post.create!(title: 'First Post', content: '<p>This is the first post</p>')
+post2 = Post.create!(title: 'Second Post', content: '<p>This is the second post</p>')
+Post.create!(title: 'Third Post', content: '<p>This is the third post</p>')
 
 post1.comments.create!(content: 'This is the first comment')
 post1.comments.create!(content: 'This is the second comment')
