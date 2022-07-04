@@ -1,4 +1,4 @@
-<div class="w-full h-screen -mt-24 sm:-mt-28 flex flex-col justify-center">
+<div class="w-full h-screen -mt-24 sm:-mt-28 flex flex-col justify-center items-center">
   <h1 class="font-bold text-5xl font-display text-center">Lorem Ipsum</h1>
   <h2 class="font-bold text-3xl font-display text-center text-muted py-2">A blog by John Doe.</h2>
   <p class="py-3 max-w-md mx-auto text-muted text-center">
@@ -6,6 +6,14 @@
     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </p>
+  <%= form_tag posts_path, method: :get, class: 'py-4' do %>
+    <div class="flex space-x-2 ">
+      <%= search_field_tag 'search', params[:search], placeholder: 'Search posts...', class: "border-2 border-surface-accent bg-base rounded px-2 focus:outline-none" %>
+      <div class="input-group-btn">
+        <%= submit_tag 'Search', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
 
 </div>
 

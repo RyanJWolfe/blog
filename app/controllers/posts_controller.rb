@@ -4,9 +4,28 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   before_action :authenticate_admin!, only: %i[new create edit update destroy]
 
+  def search
+    puts "POSTS SEARCH --------------------------------------------------"
+    if params[:search].blank?
+      redirect_to posts_path and return
+    else
+      @input = params[:search].downcase
+      puts @input
+      @posts = Post.search_by_title_and_content(@input)
+      puts @posts.to_json
+      render :index
+    end
+  end
+
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    # @posts = Post.all
+    if params[:search].blank?
+      @posts = Post.all
+    else
+      @input = params[:search].downcase
+      @posts = Post.search_by_title_and_content(@input)
+    end
   end
 
   # GET /posts/1 or /posts/1.json
@@ -67,6 +86,6 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :search)
   end
 end

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get '/search', to: 'posts#search'
+
   get '/about', to: 'about#index'
 
   get '/contact', to: 'contact#new'
