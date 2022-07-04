@@ -115,6 +115,9 @@
     .contact-form-text-area {
         @apply px-1 py-2 bg-base w-full border-b-2 border-based focus:outline-none focus:border-primary text-area-transition
     }
+    .navbar-gradient {
+        @apply bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200 dark:from-sky-900 dark:via-indigo-900 dark:to-purple-900
+    }
 }
 
 @layer utilities {
