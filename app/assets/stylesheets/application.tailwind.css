@@ -89,7 +89,7 @@
 
 @layer components {
     .btn {
-        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based cursor-pointer
+        @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-based cursor-pointer
     }
     .btn:focus {
         @apply outline-none

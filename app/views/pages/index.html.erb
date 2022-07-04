@@ -7,7 +7,7 @@
     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </p>
   <%= form_tag posts_path, method: :get, class: 'py-4' do %>
-    <div class="flex space-x-2 sm:space-x-4">
+    <div class="flex space-x-3 sm:space-x-4">
       <%= search_field_tag 'search',
                            params[:search],
                            placeholder: 'Search posts...',
@@ -28,5 +28,5 @@
     <%= render @posts %>
   </div>
 
-  <%= link_to 'All posts', posts_path, class: "btn btn-tertiary w-full text-center" %>
+  <%= link_to 'All posts', posts_path, class: "btn btn-primary w-full text-center" %>
 </div>
