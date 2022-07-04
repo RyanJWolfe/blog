@@ -125,6 +125,10 @@
         transition: border-bottom 500ms ease-in-out, padding 500ms ease-out;
     }
 
+    .footer-expand {
+        box-shadow: 0 50vh 0 50vh rgb(var(--color-bg-surface));
+    }
+
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
