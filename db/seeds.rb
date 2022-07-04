@@ -9,8 +9,13 @@
 
 Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
-10.times do
-  Post.create!(title: Faker::Lorem.sentence)
+10.times do |i|
+  post = Post.create!(title: Faker::Lorem.sentence)
+
+  if i < 4
+    post.featured = true
+    post.save
+  end
 end
 
 Post.all.each do |post|
