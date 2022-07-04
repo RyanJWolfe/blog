@@ -15,7 +15,7 @@ export default class extends Controller {
 
   handleScrollPosition() {
     // If the user is scrolled 100px or more from the top of the page show the navbar bg
-    if (this.scrollTop > 100) {
+    if (this.scrollTop > 25) {
       this.showNavbarBg()
     } else {
       this.hideNavbarBg()

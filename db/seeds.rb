@@ -18,5 +18,8 @@ Post.all.each do |post|
     post.comments.create!(content: Faker::Lorem.sentence)
   end
 
-  ActionText::RichText.create!(record_type: 'Post', record_id: post.id, name: 'content', body: Faker::Lorem.paragraph)
+  ActionText::RichText.create!(record_type: 'Post',
+                               record_id: post.id,
+                               name: 'content',
+                               body: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4))
 end

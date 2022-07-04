@@ -1,11 +1,11 @@
 <div data-navbar-target="navbarBg"
      class="fixed -top-[100px] w-full h-16 sm:h-20 lg:h-22 xl:h-24
             bg-gradient-to-r from-sky-200 via-indigo-200 to-purple-200 dark:from-sky-900 dark:via-indigo-900 dark:to-purple-900
-            transition-[top] duration-300 ease-in-out">
+            transition-[top] duration-300 ease-in-out z-20">
 </div>
 <nav data-navbar-target="navbar"
      class="fixed bg-transparent top-0 w-full h-16 sm:h-20 lg:h-22 xl:h-24 px-5 sm:px-8 md:px-12 lg:px-16 xl:px-24
-            flex items-center justify-between xl:justify-around">
+            flex items-center justify-between xl:justify-around z-20">
   <%= link_to root_path, class: "hover-underline p-2 -ml-2" do %>
     <div class="font-display text-2xl sm:text-3xl xl:text-4xl font-semibold">
       ACME Blog
@@ -18,14 +18,14 @@
       <%= render 'layouts/nav/navbar_link', route: about_path, content: 'About', condition: inside_about %>
       <%= render 'layouts/nav/navbar_link', route: contact_path, content: 'Contact', condition: inside_contact %>
       <% if admin_signed_in? %>
-        <%= button_to 'Sign out', destroy_admin_session_path, method: :delete, class: "text-lg hover:bg-surface hover-underline p-4" %>
+        <%= button_to 'Sign out', destroy_admin_session_path, method: :delete, class: "text-lg hover:bg-surface/25 hover-underline p-4" %>
       <% end %>
     </div>
     <button title="Toggle color scheme"
             data-controller="theme"
             data-action="click->theme#toggleTheme"
             type=button
-            class="p-2 hover:bg-surface hover-underline text-based hover:text-yellow-500 dark:hover:text-yellow-400">
+            class="p-2 hover:bg-surface/25 hover-underline text-based hover:text-yellow-500 dark:hover:text-yellow-400">
       <div class="hidden dark:block">
         <%= render 'shared/svgs/sun', size: 30 %>
       </div>
