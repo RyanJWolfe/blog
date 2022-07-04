@@ -34,6 +34,9 @@
   <p class="alert"><%= alert %></p>
   <%= yield %>
 </main>
+<footer>
+  <%= render 'layouts/footer/footer' %>
+</footer>
 
 <ninja-keys data-controller="command-palette" data-command-palette-target="ninja" placeholder=<%= t("command_palette.placeholder") %> %>></ninja-keys>
 </body>
