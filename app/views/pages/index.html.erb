@@ -8,7 +8,7 @@
   </p>
   <%= form_tag posts_path, method: :get, class: 'py-4' do %>
     <div class="flex space-x-2 sm:space-x-4">
-      <%= search_field_tag 'search', params[:search], placeholder: 'Search posts...', class: "w-52 sm:w-60 lg:w-80 border-2 border-surface-accent bg-base rounded px-2 focus:outline-none" %>
+      <%= search_field_tag 'search', params[:search], placeholder: 'Search posts...', class: "w-52 sm:w-60 lg:w-80 border-2 border-surface-accent bg-base rounded px-4 focus:outline-none" %>
       <div class="input-group-btn">
         <%= submit_tag 'Search', class: 'btn btn-primary sm:w-32' %>
       </div>
