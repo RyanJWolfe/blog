@@ -1,15 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
+import { toggleTheme } from "../helpers/toggle_theme";
 
 export default class extends Controller {
   toggleTheme() {
-    if (localStorage.theme === 'dark') {
-      document.documentElement.classList.remove('theme-dark')
-      document.documentElement.classList.remove('dark')
-      localStorage.theme = 'light'
-    } else {
-      document.documentElement.classList.add('theme-dark')
-      document.documentElement.classList.add('dark')
-      localStorage.theme = 'dark'
-    }
+    toggleTheme()
   }
 }

@@ -17,6 +17,9 @@
   <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons&display=block" rel="stylesheet">
+
   <%= javascript_importmap_tags %>
 
   <%= favicon_link_tag 'icons/favicon.ico' %>
@@ -32,6 +35,6 @@
   <%= yield %>
 </main>
 
-<ninja-keys data-controller="command-palette"></ninja-keys>
+<ninja-keys data-controller="command-palette" data-command-palette-target="ninja" placeholder=<%= t("command_palette.placeholder") %> %>></ninja-keys>
 </body>
 </html>
