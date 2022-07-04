@@ -128,5 +128,9 @@
     input:-webkit-autofill:active {
         transition: all 10000s ease-in-out 0s;
     }
+
+    .navbar-bg-transition {
+        transition: top 300ms ease-in-out;
+    }
 }
 @import 'actiontext.css';
