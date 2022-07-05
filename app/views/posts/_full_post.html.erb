@@ -1,15 +1,19 @@
 <div id="<%= dom_id post %>">
-  <p class="text-muted">
-    <%= time_tag post.created_at %>
-  </p>
-  <h2 class="my-1 font-display font-bold text-2xl">
+  <h2 class="my-1 font-display font-bold text-3xl lg:text-4xl">
     <%= post.title %>
   </h2>
 
-
-  <p class="my-2">
-    <%= post.content %>
+  <p class="flex space-x-2 text-muted">
+    <span>John Doe</span>
+    <span>&bull;</span>
+    <span><%= time_tag post.created_at.to_date %></span>
   </p>
+
+  <hr class="mt-6 border dark:border-surface"/>
+
+  <div class="my-6 text-lg">
+    <%= post.content %>
+  </div>
 
 
 
