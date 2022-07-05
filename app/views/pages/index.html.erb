@@ -17,14 +17,14 @@
 
 </div>
 
-<div class="flex flex-col justify-center w-full space-y-8">
+<div class="flex flex-col justify-center w-full space-y-8 max-w-4xl mx-auto">
   <h2 class="inline-block navbar-gradient font-display text-3xl sm:text-4xl font-bold text-left px-8
             py-3 rounded-lg drop-shadow-lg">Featured</h2>
   <div id="posts" class="min-w-full grid grid-cols-1 gap-y-4">
     <%= render @posts %>
   </div>
 
-  <div class="w-full flex justify-center">
-    <%= link_to 'All posts', posts_path, class: "max-w-md w-full text-center btn btn-primary" %>
+  <div class="w-full flex items-start">
+    <%= link_to 'All posts', posts_path, class: "w-40 text-center btn btn-secondary" %>
   </div>
 </div>
