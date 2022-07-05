@@ -1,0 +1,16 @@
+<h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-center">Lorem Ipsum</h1>
+<h2 class="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display text-center text-muted py-2">A blog by John Doe.</h2>
+<p class="py-3 max-w-md md:max-w-lg lg:max-w-xl mx-auto text-muted text-center md:text-lg">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</p>
+<%= form_tag posts_path, method: :get, class: 'py-4' do %>
+  <div class="flex space-x-3 sm:space-x-4">
+    <%= render 'pages/post_search_field', width_classes: "w-52 sm:w-60 lg:w-80" %>
+    <div class="input-group-btn">
+      <%= submit_tag 'Search', class: 'btn btn-primary sm:w-32' %>
+    </div>
+  </div>
+<% end %>
+

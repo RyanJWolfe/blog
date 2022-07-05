@@ -1,30 +1,24 @@
 <div class="w-full h-screen -mt-24 sm:-mt-28 flex flex-col sm:space-y-2 justify-center items-center">
-  <h1 class="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display text-center">Lorem Ipsum</h1>
-  <h2 class="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display text-center text-muted py-2">A blog by John Doe.</h2>
-  <p class="py-3 max-w-md md:max-w-lg lg:max-w-xl mx-auto text-muted text-center md:text-lg">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
-  <%= form_tag posts_path, method: :get, class: 'py-4' do %>
-    <div class="flex space-x-3 sm:space-x-4">
-      <%= render 'pages/post_search_field', width_classes: "w-52 sm:w-60 lg:w-80" %>
-      <div class="input-group-btn">
-        <%= submit_tag 'Search', class: 'btn btn-primary sm:w-32' %>
-      </div>
-    </div>
-  <% end %>
-
+  <%= render 'pages/landing' %>
 </div>
 
 <div class="flex flex-col justify-center w-full space-y-8 max-w-4xl mx-auto">
   <h2 class="inline-block navbar-gradient font-display text-3xl sm:text-4xl font-bold text-left px-8
             py-3 rounded-lg drop-shadow-lg">Featured</h2>
   <div id="posts" class="min-w-full grid grid-cols-1 gap-y-4">
-    <%= render @posts %>
+    <%= render @featured_posts %>
+  </div>
+</div>
+
+<div class="my-16 flex flex-col justify-center w-full space-y-8 max-w-4xl mx-auto">
+  <h2 class="inline-block navbar-gradient font-display text-3xl sm:text-4xl font-bold text-left px-8
+            py-3 rounded-lg drop-shadow-lg">Latest</h2>
+  <div id="posts" class="min-w-full grid grid-cols-1 gap-y-4">
+    <%= render @recent_posts %>
   </div>
 
   <div class="w-full flex items-start">
-    <%= link_to 'All posts', posts_path, class: "w-40 text-center btn btn-secondary" %>
+    <%= link_to 'All posts', posts_path, class: "w-full text-center btn btn-tertiary" %>
   </div>
 </div>
+
