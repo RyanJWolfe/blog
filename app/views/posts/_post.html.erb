@@ -15,14 +15,11 @@
     <p class="mt-5 text-muted">
       <strong><%= pluralize post.comments.count, "comment" %></strong>
     </p>
-
-
-
+  </div>
+<% end %>
     <% if action_name != "show" %>
       <% if admin_signed_in? %>
       <%= link_to 'Edit this post', edit_post_path(post), class: "btn btn-tertiary" %>
       <% end %>
-      <hr class="mt-6 border">
     <% end %>
-</div>
-<% end %>
+<hr class="mt-2 border" />
