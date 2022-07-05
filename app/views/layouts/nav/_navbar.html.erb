@@ -12,6 +12,11 @@
     </div>
   <% end %>
   <div class="flex -mr-2.5 lg:space-x-2 items-center">
+    <%= form_tag posts_path, method: :get, class: "hidden lg:inline-block px-4" do %>
+      <div class="flex space-x-3 sm:space-x-4">
+        <%= render 'pages/post_search_field', width_classes: "w-full h-10" %>
+      </div>
+    <% end %>
     <div class="hidden lg:flex font-display">
       <%= render 'layouts/nav/navbar_link', route: root_path, content: 'Home', condition: current_page?(root_path) %>
       <%= render 'layouts/nav/navbar_link', route: posts_path, content: 'Posts', condition: inside_posts %>

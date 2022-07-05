@@ -1,34 +1,39 @@
 <div data-mobile-menu-target="dropdown"
      id="mobile-menu"
-     class="-right-full w-7/12 h-screen absolute top-0 text-based bg-gradient-to-br from-surface to-base-hue
+     class="-right-full w-10/12 sm:w-7/12 h-screen absolute top-0 text-based bg-gradient-to-br from-surface to-base-hue
      shadow-xl dark:shadow-neutral-900 space-y-8 z-10 transition-[right] ease-in-out duration-500 px-6 sm:px-8 md:px-16">
   <div class="flex flex-col space-y-2 w-full tracking-wider text-right text-lg md:text-xl pt-20 sm:pt-32 pb-10">
+    <%= form_tag posts_path, method: :get, class: 'pb-4 side-menu-fade-in', style: "transition-delay: 100ms;" do %>
+      <div class="flex space-x-3 sm:space-x-4">
+        <%= render 'pages/post_search_field', width_classes: "w-full h-12" %>
+      </div>
+    <% end %>
     <%= render 'layouts/nav/side_menu_link',
                route: root_path,
                content: 'Home',
                condition: current_page?(root_path),
-               delay: '100ms' %>
+               delay: '200ms' %>
     <%= render 'layouts/nav/side_menu_link',
                route: posts_path,
                content: 'Posts',
                condition: inside_posts,
-               delay: '200ms' %>
+               delay: '300ms' %>
     <%= render 'layouts/nav/side_menu_link',
                route: about_path,
                content: 'About',
                condition: inside_about,
-               delay: '300ms' %>
+               delay: '400ms' %>
     <%= render 'layouts/nav/side_menu_link',
                route: contact_path,
                content: 'Contact',
                condition: inside_contact,
-               delay: '400ms' %>
+               delay: '500ms' %>
     <% if admin_signed_in? %>
       <%= button_to destroy_admin_session_path,
                     method: :delete,
                     class: "w-full px-3 py-2 side-menu-fade-in hover:bg-surface
-                            border-b-2 border-b-transparent hover:border-primary",
-                    style: "transition-delay: 500ms;" do %>
+                            border-b-2 border-b-transparent hover:border-surface-accent",
+                    style: "transition-delay: 600ms;" do %>
         <span class="text-right inline-block w-full font-display">Sign out</span>
       <% end %>
     <% end %>
